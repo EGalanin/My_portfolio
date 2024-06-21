@@ -7,7 +7,7 @@ import photo from './../../../assets/img/photo.webp'
 export const Main = () => {
     return (
         <StyledMain>
-            <FlexWrapper align={'center'} justify={'space-around'}>
+            <FlexWrapper align={'center'} justify={'space-around'} >
                 <div>
                     <Name>Hi 👋,
                         I am
@@ -24,8 +24,9 @@ export const Main = () => {
 };
 
 const StyledMain = styled.section`
-    min-height: 100vh;
-    background-color: #89bdbd;
+    min-height: 60vh;
+    background-color: #89bdbd; 
+    padding: 200px 0;
 `;
 
 const Name = styled.h2`

@@ -12,7 +12,7 @@ const headerItems = ['Home', 'About', 'Tech Stack', 'Projects', 'Contact'];
 export const Footer = () => {
     return (
         <StyledFooter>
-            <FlexWrapper wrap={'wrap'} justify={'space-between'}>
+            <FlexWrapper wrap={'wrap'} justify={'space-around'}>
                 <Logo />
                 <Menu menuItems={footerItems}/>
                 <SocialLink socialItems={SocialLinkItems}/>

@@ -3,6 +3,8 @@ import styled from "styled-components";
 import {SectionTitle} from "../../../components/SectionTitle";
 import {Experience} from "./experience/Experience";
 
+
+
 export const About = () => {
     return (
         <StyledAbout>
@@ -38,6 +40,7 @@ export const About = () => {
 };
 
 const StyledAbout = styled.section`
+    min-height: 100vh;
     background-color: #a3d4d6;
     justify-content: center;
    

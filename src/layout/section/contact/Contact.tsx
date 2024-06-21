@@ -8,8 +8,8 @@ export const Contact = () => {
         <StyledContact>
             <SectionTitle>For any questions please mail me:</SectionTitle>
             <StyledForm>
-                <Field placeholder={'Your name'}/>
-                <Field  placeholder={'Your email'}/>
+                <Field placeholder={'Your name'} type={'text'}/>
+                <Field  placeholder={'Your email'} type={'email'}/>
                 <Field as={'textarea'} placeholder={'Your text'}/>
                 <Button type={'submit'}>Send message</Button>
 

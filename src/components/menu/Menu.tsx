@@ -22,6 +22,7 @@ const StyledMenu = styled.nav`
       display: flex;
         gap: 20px;
         justify-content: center;
+        list-style-type: none;
     }
 `;
 
