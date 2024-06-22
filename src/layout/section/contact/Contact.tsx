@@ -2,26 +2,25 @@ import React from 'react';
 import styled from "styled-components";
 import {SectionTitle} from "../../../components/SectionTitle";
 import {Button} from "../../../components/Button";
+import {Container} from "../../../components/Container";
 
 export const Contact = () => {
     return (
         <StyledContact>
-            <SectionTitle>For any questions please mail me:</SectionTitle>
-            <StyledForm>
-                <Field placeholder={'Your name'} type={'text'}/>
-                <Field  placeholder={'Your email'} type={'email'}/>
-                <Field as={'textarea'} placeholder={'Your text'}/>
-                <Button type={'submit'}>Send message</Button>
-
-            </StyledForm>
-
-
+            <Container>
+                <SectionTitle>For any questions please mail me:</SectionTitle>
+                <StyledForm>
+                    <Field placeholder={'Your name'} type={'text'}/>
+                    <Field  placeholder={'Your email'} type={'email'}/>
+                    <Field as={'textarea'} placeholder={'Your text'}/>
+                    <Button type={'submit'}>Send message</Button>
+                </StyledForm>
+            </Container>
         </StyledContact>
     );
 };
 
-const StyledContact = styled.section`
-    background-color: #8ba175;
+const StyledContact = styled.section`  
     justify-content: center;
     min-height: 50vh;
     //justify-content: center;

@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
+import {Button} from "../Button";
 
 export const Menu = (props: {menuItems: Array<string>}) => {
     return (
@@ -8,7 +9,8 @@ export const Menu = (props: {menuItems: Array<string>}) => {
                 {props.menuItems.map( (item, index) => {
                     return (
                         <li key={index}>
-                            <a href=''>{item}</a>
+                            <Button  as="a" href="#">{item}</Button>
+                            {/*<a href=''>{item}</a>*/}
                         </li>
                     )
                 })}

@@ -9,33 +9,41 @@ import photo16 from '../../../assets/img/Rectangle-16.webp';
 import photo24 from '../../../assets/img/Rectangle-24.webp';
 import photo23 from '../../../assets/img/Rectangle-23.webp';
 import photo22 from '../../../assets/img/Rectangle-22.webp';
+import {theme} from "../../../styles/Theme";
+import {Container} from "../../../components/Container";
 
 
 const projectImages = [photo18, photo16, photo8, photo24, photo23, photo22]
 
+const arrayProjects = projectImages.map((item) => {
+    return (
+        <Project src={item}
+                 title={'Project Tile goes here'}
+                 text={'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content'}
+                 stack={'Tech stack : HTML , JavaScript, SASS, React'}/>
+    )
+})
+
 export const Projects = () => {
     return (
         <StyledProjects>
-            <SectionTitle>Projects</SectionTitle>
-            <span>Things I’ve built so far</span>
-            <FlexWrapper wrap={'wrap'} justify={'space-between'}>
-                {projectImages.map((item) => {
-                    return (
-                        <Project src={item}
-                                 title={'Project Tile goes here'}
-                                 text={'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content'}
-                                 stack={'Tech stack : HTML , JavaScript, SASS, React'}/>
-                    )
-                })}
-
-            </FlexWrapper>
-
+            <Container>
+                <SectionTitle>Projects</SectionTitle>
+                <StyledSpan>Things I’ve built so far</StyledSpan>
+                <FlexWrapper wrap={'wrap'} justify={'space-between'}>
+                    {arrayProjects}
+                </FlexWrapper>
+            </Container>
         </StyledProjects>
     );
 };
 
 const StyledProjects = styled.section`
-    background-color: #8e5959;
     min-height: 100vh;
     text-align: center;
+    color: ${theme.colors.projectFont};
+`;
+
+const StyledSpan = styled.span`
+    color: ${theme.colors.font};
 `;
