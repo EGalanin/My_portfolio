@@ -1,15 +1,16 @@
 import React from 'react';
 import styled from "styled-components";
-import {Button} from "../Button";
+import {Button} from "../../../components/Button";
 
-export const Menu = (props: { menuItems: Array<string> }) => {
+
+export const HeaderMenu = (props: {menuItems: Array<string>}) => {
     return (
         <StyledMenu>
             <ul>
-                {props.menuItems.map((item, index) => {
+                {props.menuItems.map( (item, index) => {
                     return (
                         <ListItem key={index}>
-                            <Button as="a" href="#">{item}</Button>
+                            <Button  as="a" href="#">{item}</Button>
                             {/*<a href=''>{item}</a>*/}
                         </ListItem>
                     )
@@ -21,7 +22,7 @@ export const Menu = (props: { menuItems: Array<string> }) => {
 
 const StyledMenu = styled.nav`
     ul {
-        display: flex;
+      display: flex;
         gap: 20px;
         justify-content: center;
         list-style-type: none;
@@ -30,16 +31,16 @@ const StyledMenu = styled.nav`
 
 const ListItem = styled.li`
     //width: 56px;
-    height: 26px;
+    height: 26px;     
     font-family: 'DM Sans', sans-serif;
-    font-size: 18px;
-    font-weight: 400;
+    font-size: 20px;
+    font-weight: 500;
     line-height: 26px;
-    text-align: left;
-
+    text-align: center;
+    gap: 10px;
+    
     &:hover ${Button} {
         color: white;
         cursor: pointer;
-    }
+    }  
 `;
-

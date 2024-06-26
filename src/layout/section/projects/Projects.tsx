@@ -29,7 +29,7 @@ export const Projects = () => {
         <StyledProjects>
             <Container>
                 <SectionTitle>Projects</SectionTitle>
-                <StyledSpan>Things I’ve built so far</StyledSpan>
+                <Text>Things I’ve built so far</Text>
                 <FlexWrapper wrap={'wrap'} justify={'space-between'}>
                     {arrayProjects}
                 </FlexWrapper>
@@ -44,6 +44,12 @@ const StyledProjects = styled.section`
     color: ${theme.colors.projectFont};
 `;
 
-const StyledSpan = styled.span`
-    color: ${theme.colors.font};
+const Text = styled.h3`
+    color: ${theme.colors.font};   
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 26px;
+    text-align: center;
+    margin-bottom: 30px;
+
 `;

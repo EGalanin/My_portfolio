@@ -46,7 +46,8 @@ export const Experience = (props: ExperiencePropsType) => {
                             height={"12"}
                             viewBox={"0 0 12 12"}
                         />
-                        {props.period}</Period>
+                        {props.period}
+                    </Period>
                 </SpanWrapper>
             </FlexWrapper>
             <Separator/>
@@ -58,31 +59,68 @@ const StyledExperience = styled.div`
     margin-bottom: 20px;
 `;
 
-const Name = styled.h4`
-    margin: 0`;
+const Name = styled.h4`   
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 1px;
+    text-align: left;
 
-const Text = styled.span`
-    margin-right: 40px;
 `;
 
-const Location = styled.span``;
+const Text = styled.span`    
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 28px;
+    letter-spacing: 1px;
+    text-align: left;
 
-const Time = styled.span`
-    width: 84px;
-    height: 24px;
-    gap: 0px;
-    border-radius: 10px;
-    //opacity: 0px;
-    background: #d7ffe0;
 `;
 
-const Period = styled.span``;
+const Location = styled.span`   
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 28px;
+    letter-spacing: 1px;
+    text-align: left;
+
+`;
 
 const SpanWrapper = styled.div`
     display: flex;
-    flex-direction: column;
+    flex-direction: column;  
     align-items: end;
+    gap: 15px;
 `;
+
+const Time = styled.div`
+    width: 84px;
+    height: 24px;
+    border-radius: 10px;
+    font-size: 9px;
+    font-weight: 600;
+    line-height: 26px;
+    text-align: center;
+    color: #018C0F;
+
+    background: #d7ffe0;
+`;
+
+const Period = styled.div` 
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 28px;
+    letter-spacing: 1px;
+    text-align: left;
+    width: 200px;
+    height: 17px; 
+    
+`;
+
+
 
 const Separator = styled.hr`
     margin-top: 15px;

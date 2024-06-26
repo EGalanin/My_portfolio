@@ -14,7 +14,7 @@ export const Skill = (props: {iconId: string}) => {
 
 const StyledSkill = styled.div`
     width: 20%;
-    background-color: #e4ca9a;
+    //background-color: #e4ca9a;
     margin: 10px;
 `;
 

@@ -54,10 +54,20 @@ const StyledAbout = styled.section`
 
 `;
 
-const Text = styled.p`
+const Text = styled.p`    
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26px;
+    text-align: left;
 
 `;
 
-const Title = styled.h3`
-    text-align: center;
+const Title = styled.h3` 
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 52px;
+    letter-spacing: -0.4000000059604645px;
+    text-align: left;
+    margin: 40px 0;
+
 `;
