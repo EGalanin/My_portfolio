@@ -102,7 +102,6 @@ const Time = styled.div`
     line-height: 26px;
     text-align: center;
     color: #018C0F;
-
     background: #d7ffe0;
 `;
 

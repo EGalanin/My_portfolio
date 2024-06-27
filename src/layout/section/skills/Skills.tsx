@@ -32,12 +32,12 @@ const StyledSkills = styled.section`
 `;
 
 const Text = styled.h3`
-    color: ${theme.colors.font};   
+    color: ${theme.colors.colorFont};   
     font-size: 32px;
     font-weight: 400;
     line-height: 26px;
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 148px;
 `;
 
 

@@ -5,6 +5,7 @@ import {Menu} from "../../components/menu/Menu";
 import {SocialLink} from "../../components/socialLink/SocialLink";
 import {FlexWrapper} from "../../components/FlexWrapper";
 import {Container} from "../../components/Container";
+import {theme} from "../../styles/Theme";
 
 const footerItems = ['+91 12345 09876', 'info@example.com'];
 const SocialLinkItems = [
@@ -38,11 +39,12 @@ export const Footer = () => {
 const StyledFooter = styled.footer`
     justify-content: center;
     padding: 30px 0;
+    //color: ${theme.colors.colorMain};
 `;
 
 const Separator = styled.hr`
-    color: #705e5e;
-    margin: 20px 0;
+    color: ${theme.colors.accentColor};
+    margin: 62px 0 40px;
 `;
 
 const Copyright = styled.small`

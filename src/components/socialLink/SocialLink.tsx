@@ -34,7 +34,7 @@ const StyledSocialLink = styled.nav`
 `;
 
 const SocialItem = styled.li`
-    background-color: ${theme.colors.primaryBg};
+        //background-color: ${theme.colors.primaryBg};
     border-radius: 50%;
     width: 30px;
     height: 30px;
@@ -42,10 +42,10 @@ const SocialItem = styled.li`
     display: flex;
     justify-content: center;
     align-items: center;
-    color: ${theme.colors.font};
+    color: ${theme.colors.colorFont};
 
     &:hover {
-        color: #3a9ea1;
+        color: ${theme.colors.colorActive};
         cursor: pointer;
         transform: translateY(-5px);
     }

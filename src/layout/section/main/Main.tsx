@@ -4,6 +4,7 @@ import {FlexWrapper} from "../../../components/FlexWrapper";
 import photo from './../../../assets/img/photo.webp'
 import {Container} from "../../../components/Container";
 import backImg from "../../../assets/img/Abstract.png";
+import {theme} from "../../../styles/Theme";
 
 
 export const Main = () => {
@@ -30,6 +31,7 @@ const StyledMain = styled.section`
     //min-height: 60vh;   
     padding: 200px 0;
     display: flex;
+    color: ${theme.colors.colorMain}
 `;
 
 const Name = styled.h2`

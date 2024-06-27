@@ -23,7 +23,7 @@ export const Contact = () => {
 
 const StyledContact = styled.section`  
     justify-content: center; 
-    padding-bottom: 30px;
+    padding: 100px 0;
 `;
 
 const StyledForm = styled.form`
@@ -44,16 +44,16 @@ const StyledForm = styled.form`
 const Field = styled.input`
     width: 100%;
     padding: 7px 15px;
-    color: ${theme.colors.font};
-    border: 1px solid #aaa5a5;
-    background-color: #363636;
+    color: ${theme.colors.colorFont};
+    border: 1px solid ${theme.colors.colorFont};
+    background-color: ${theme.colors.projectBg};
     font-family: 'Poppins', sans-serif;
     font-size: 18px;
     font-weight: 300;
     line-height: 26px;
 
     &:focus-visible {
-        outline: 1px solid #aaa5a5;
+        outline: 1px solid ${theme.colors.accentColor};
     }
 
 

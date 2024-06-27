@@ -12,7 +12,7 @@ if(root) {
     root.render(
         <React.StrictMode>
             <GlobalStyle />
-            <App/>
+            <App />
         </React.StrictMode>
     );
 }

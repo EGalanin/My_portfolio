@@ -1,9 +1,10 @@
 import React from 'react';
 import styled from "styled-components";
 import {Button} from "../../../components/Button";
+import {theme} from "../../../styles/Theme";
 
 
-export const HeaderMenu = (props: {menuItems: Array<string>}) => {
+export const  HeaderMenu = (props: {menuItems: Array<string>}) => {
     return (
         <StyledMenu>
             <ul>
@@ -23,7 +24,7 @@ export const HeaderMenu = (props: {menuItems: Array<string>}) => {
 const StyledMenu = styled.nav`
     ul {
       display: flex;
-        gap: 20px;
+        gap: 50px;
         justify-content: center;
         list-style-type: none;
     }
@@ -37,10 +38,10 @@ const ListItem = styled.li`
     font-weight: 500;
     line-height: 26px;
     text-align: center;
-    gap: 10px;
+    //gap: 10px;
     
     &:hover ${Button} {
-        color: white;
+        color: ${theme.colors.colorActive};
         cursor: pointer;
     }  
 `;

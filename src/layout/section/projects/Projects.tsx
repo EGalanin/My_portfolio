@@ -41,15 +41,15 @@ export const Projects = () => {
 const StyledProjects = styled.section`
     min-height: 100vh;
     text-align: center;
-    color: ${theme.colors.projectFont};
+    color: ${theme.colors.colorFont};
 `;
 
 const Text = styled.h3`
-    color: ${theme.colors.font};   
+    // color: ${theme.colors.colorFont};   
     font-size: 32px;
     font-weight: 400;
     line-height: 26px;
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 113px;
 
 `;

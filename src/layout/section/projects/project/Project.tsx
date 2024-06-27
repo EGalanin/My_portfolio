@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import {Icon} from "../../../../components/icon/Icon";
+import {theme} from "../../../../styles/Theme";
 
 const LinkItems = ['akarIcon', 'akarIconGitHub'];
 
@@ -47,22 +48,19 @@ export const Project = (props: projectPropsType) => {
 };
 
 const StyledProject = styled.div`
-    background: #363636;
-    box-shadow: 2px 2px 100px 0px #00000033;
-
-
+    background: ${theme.colors.projectBg};
+    box-shadow: 2px 2px 100px rgba(12, 10, 10, 0.2);
     width: 373px;
     height: 567px;
     border-radius: 20px;
-    //opacity: 0px;
+    //opacity: 50%;
     margin: 5px;
 `;
 
 const Image = styled.img`
     width: 375px;
-    height: 260px;
-    gap: 0px;
-    border-radius: 20px 20px 0px 0px;
+    height: 260px;   
+    border-radius: 20px 20px 0 0;
     opacity: 0px;
 `;
 
@@ -70,7 +68,8 @@ const Title = styled.h3`
     font-size: 28px;
     font-weight: 500;
     line-height: 26px;
-    text-align: center;  
+    text-align: center; 
+    padding: 27px 0 17px;
 `;
 
 const Text = styled.p`    
@@ -78,20 +77,25 @@ const Text = styled.p`
     font-weight: 300;
     line-height: 26px;
     text-align: left;
+    max-width: 314px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
 `;
 
 const Stack = styled.span`  
-    font-size: 16px;
-    font-weight: 400;
+    font-size: 14px;
+    font-weight: 300;
     line-height: 26px;
     text-align: left;
-
+    padding: 15px 0;
 `;
 
 const Link = styled.a`
     display: flex;
     align-items: center;
-    color: azure;
+    color: ${theme.colors.colorLink};
     gap: 5px;    
     font-size: 16px;
     font-weight: 400;
@@ -107,8 +111,8 @@ const WrapperLink = styled.div`
 
 const ContentWrapper = styled.div`
     display: flex;
-    padding: 15px;
+    padding: 0 28px;
     flex-direction: column;
     justify-content: flex-start;
-    gap: 15px;
+    //gap: 15px;
 `;

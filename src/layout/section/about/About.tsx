@@ -50,7 +50,7 @@ export const About = () => {
 const StyledAbout = styled.section`
     min-height: 100vh;
     justify-content: center;
-    color: ${theme.colors.projectFont}
+    color: ${theme.colors.colorFont}
 
 `;
 
@@ -69,5 +69,6 @@ const Title = styled.h3`
     letter-spacing: -0.4000000059604645px;
     text-align: left;
     margin: 40px 0;
+    color: ${theme.colors.titleFont}
 
 `;

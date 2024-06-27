@@ -11,13 +11,13 @@ import {Contact} from "./layout/section/contact/Contact";
 function App() {
     return (
         <div className="App">
-          <Header />
-          <Main />
-          <About />
-          <Skills />
-          <Projects />
-          <Contact />
-          <Footer />
+            <Header/>
+            <Main/>
+            <About/>
+            <Skills/>
+            <Projects/>
+            <Contact/>
+            <Footer/>
         </div>
     );
 }
