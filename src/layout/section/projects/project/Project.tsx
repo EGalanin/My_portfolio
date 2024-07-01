@@ -55,6 +55,10 @@ const StyledProject = styled.div`
     border-radius: 20px;
     //opacity: 50%;
     margin: 5px;
+    @media ${theme.media.mobile} {
+        margin: 10px auto;
+        
+    }
 `;
 
 const Image = styled.img`

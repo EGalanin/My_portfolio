@@ -33,7 +33,8 @@ const StyledSkills = styled.section`
 
 const Text = styled.h3`
     color: ${theme.colors.colorFont};   
-    font-size: 32px;
+    //font-size: 32px;
+    font-size: calc( (100vw - 576px) / (1600 - 576) * (32 - 18) + 18px);
     font-weight: 400;
     line-height: 26px;
     text-align: center;

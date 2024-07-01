@@ -55,7 +55,8 @@ const StyledAbout = styled.section`
 `;
 
 const Text = styled.p`    
-    font-size: 18px;
+    //font-size: 18px;
+    font-size: calc( (100vw - 576px) / (1600 - 576) * (18 - 14) + 14px);
     font-weight: 400;
     line-height: 26px;
     text-align: left;
@@ -63,7 +64,8 @@ const Text = styled.p`
 `;
 
 const Title = styled.h3` 
-    font-size: 42px;
+    //font-size: 42px;
+    font-size: calc( (100vw - 576px) / (1600 - 576) * (42 - 20) + 20px);
     font-weight: 700;
     line-height: 52px;
     letter-spacing: -0.4000000059604645px;

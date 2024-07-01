@@ -28,6 +28,10 @@ const StyledMenu = styled.nav`
         justify-content: center;
         list-style-type: none;
     }
+    
+    @media ${theme.media.tablet} {
+        display: none;
+    }
 `;
 
 const ListItem = styled.li`

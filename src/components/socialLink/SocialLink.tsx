@@ -24,7 +24,7 @@ export const SocialLink = (props: { socialItems:  Array<{name: string; viewbox: 
   );
 };
 
-const StyledSocialLink = styled.nav`
+export const StyledSocialLink = styled.nav`
   ul {
     display: flex;
     gap: 20px;

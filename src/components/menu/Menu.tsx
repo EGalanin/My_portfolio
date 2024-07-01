@@ -32,7 +32,8 @@ const ListItem = styled.li`
     //width: 56px;
     height: 26px;
     font-family: 'DM Sans', sans-serif;
-    font-size: 18px;
+    //font-size: 18px;
+    font-size: calc( (100vw - 576px) / (1600 - 576) * (18 - 14) + 14px);
     font-weight: 400;
     line-height: 26px;
     text-align: left;

@@ -1,21 +1,12 @@
 import React from 'react';
 import styled from "styled-components";
-import {Logo} from "../../components/logo/Logo";
+import {Logo, StyledIcon} from "../../components/logo/Logo";
 import {Menu} from "../../components/menu/Menu";
-import {SocialLink} from "../../components/socialLink/SocialLink";
+import {SocialLink, StyledSocialLink} from "../../components/socialLink/SocialLink";
 import {FlexWrapper} from "../../components/FlexWrapper";
 import {Container} from "../../components/Container";
 import {theme} from "../../styles/Theme";
-
-const footerItems = ['+91 12345 09876', 'info@example.com'];
-const SocialLinkItems = [
-    {name: 'github', viewbox: "0 0 30 30"},
-    {name: 'twit', viewbox: "0 0 30 30"},
-    {name: 'linkedin', viewbox: "0 0 30 30"},
-    {name: 'telegram', viewbox: "0 0 512 512"},
-    {name: 'vk', viewbox: "0 0 98 98"}
-];
-const headerItems = ['Home', 'About', 'Tech Stack', 'Projects', 'Contact'];
+import {font} from "../../styles/common/Common";
 
 export const Footer = () => {
     return (
@@ -23,12 +14,12 @@ export const Footer = () => {
             <Container>
                 <FlexWrapper wrap={'wrap'} justify={'space-around'} align={'center'}>
                     <Logo/>
-                    <Menu menuItems={footerItems}/>
-                    <SocialLink socialItems={SocialLinkItems}/>
+                    <Menu menuItems={theme.footerItems}/>
+                    <SocialLink socialItems={theme.SocialLinkItems}/>
                 </FlexWrapper>
                 <Separator/>
                 <FlexWrapper wrap={'wrap'} justify={'space-between'} align={'center'}>
-                    <Menu menuItems={headerItems}/>
+                    <Menu menuItems={theme.navigateItems}/>
                     <Copyright>Designed and built by <Span>Galanin Evgeniy</Span> with <Span>Love</Span> & <Span>Coffee</Span></Copyright>
                 </FlexWrapper>
             </Container>
@@ -39,7 +30,27 @@ export const Footer = () => {
 const StyledFooter = styled.footer`
     justify-content: center;
     padding: 30px 0;
-    //color: ${theme.colors.colorMain};
+    //color: ${theme.colors.colorMain};   
+    
+    ${StyledIcon} {
+        @media ${theme.media.mobile} {
+            display: none; 
+        } 
+    }
+    
+    ${StyledSocialLink} {
+        @media ${theme.media.mobile} {
+            display: none;            
+        }
+    }
+    // ${FlexWrapper} {
+    //     @media ${theme.media.mobile} {
+    //         flex-
+    //        
+    //     }
+    // }
+    
+    
 `;
 
 const Separator = styled.hr`
@@ -48,8 +59,10 @@ const Separator = styled.hr`
 `;
 
 const Copyright = styled.small`
-    font-size: 18px;
-    font-weight: 400;
+    //font-size: 18px;
+    ${font({weight: 400, Fmax: 18, Fmin: 12})}
+    //font-size: calc( (100vw - 576px) / (1600 - 576) * (18 - 14) + 14px);
+    //font-weight: 400;
     line-height: 26px;
     text-align: center;
     opacity: 50%;
