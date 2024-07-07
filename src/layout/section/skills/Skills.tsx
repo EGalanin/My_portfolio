@@ -1,44 +1,33 @@
 import React from 'react';
-import styled from "styled-components";
 import {SectionTitle} from "../../../components/SectionTitle";
-import {FlexWrapper} from "../../../components/FlexWrapper";
 import {Skill} from "./skill/Skill";
-import {theme} from "../../../styles/Theme";
 import {Container} from "../../../components/Container";
+import {S} from './Skills_Styled';
 
-const skillItems = ['typeHTML', 'typeCSS', 'typeJS', 'typeReact', 'typeBootstrap', 'typeTailwind', 'typeVSCode', 'typeSAAS', 'typeGit', 'typeGitHub', 'vector', 'greensock'];
+const skillItems = ['typeHTML', 'typeCSS', 'typeJS', 'typeReact', 'vector', 'typeBootstrap', 'typeTailwind', 'typeSAAS', 'typeGit', 'greensock', 'typeVSCode', 'typeGitHub'];
 
-export const Skills = () => {
+const SkillArray = skillItems.map((item) => {
     return (
-        <StyledSkills>
+        <Skill iconId={item}/>
+    )
+})
+
+export const Skills: React.FC = () => {
+    return (
+        <S.Skills>
             <Container>
                 <SectionTitle>My Tech Stack</SectionTitle>
-                <Text> Technologies I’ve been working with recently</Text>
-                <FlexWrapper wrap={'wrap'} justify={'space-between'} >
-                    {skillItems.map((item) => {
-                        return (
-                            <Skill iconId={item} />
-                        )
-                    })}
-                </FlexWrapper>
+                <S.Text> Technologies I’ve been working with recently</S.Text>
+                {/*<FlexWrapper wrap={'wrap'} justify={'space-between'}>*/}
+                <S.Wrapper>
+                    {SkillArray}
+                </S.Wrapper>
+                {/*</FlexWrapper>*/}
             </Container>
-        </StyledSkills>
+        </S.Skills>
     );
 };
 
-const StyledSkills = styled.section`
-    min-height: 100vh;
-    text-align: center;
-`;
 
-const Text = styled.h3`
-    color: ${theme.colors.colorFont};   
-    //font-size: 32px;
-    font-size: calc( (100vw - 576px) / (1600 - 576) * (32 - 18) + 18px);
-    font-weight: 400;
-    line-height: 26px;
-    text-align: center;
-    margin-bottom: 148px;
-`;
 
 

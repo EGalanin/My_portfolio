@@ -1,36 +1,33 @@
 import React from 'react';
-import styled from "styled-components";
 import {Logo} from "../../components/logo/Logo";
 import {SocialLink} from "../../components/socialLink/SocialLink";
 import {Container} from "../../components/Container";
 import {FlexWrapper} from "../../components/FlexWrapper";
-import {HeaderMenu} from "./headerMenu/HeaderMenu";
+import {DesktopMenu} from "./headerMenu/desktopMenu/DesktopMenu";
 import {theme} from "../../styles/Theme";
 import {Toggle} from "../../components/toggle/Toggle";
-import {MobileMenu} from "./mobileMenu/MobileMenu";
+import {MobileMenu} from "./headerMenu/mobileMenu/MobileMenu";
+import {S} from './Header_Styled';
 
-export const Header = () => {
+
+export const Header: React.FC = () => {
+    const [width, setWidth] = React.useState(window.innerWidth);
+    const breakpoint = 768;
+
+    React.useEffect(() => {
+        window.addEventListener("resize", () => setWidth(window.innerWidth));
+    }, []);
+
     return (
-        <StyledHeader>
+        <S.Header>
             <Container>
                 <FlexWrapper justify={'space-around'} align={'center'}>
                     <Logo/>
-                    <HeaderMenu menuItems={theme.navigateItems}/>
-                    <MobileMenu menuItems={theme.navigateItems} />
+                    {width > breakpoint ? <DesktopMenu menuItems={theme.navigateItems}/> : <MobileMenu menuItems={theme.navigateItems} />}
                     <SocialLink socialItems={theme.SocialLinkItems}/>
                     <Toggle />
                 </FlexWrapper>
             </Container>
-        </StyledHeader>
+        </S.Header>
     );
 };
-
-const StyledHeader = styled.header`
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;      
-    z-index: 99999;
-    padding-top: 30px;
-`;
-

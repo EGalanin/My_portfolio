@@ -1,61 +1,21 @@
 import React from 'react';
-import styled from "styled-components";
 import {SectionTitle} from "../../../components/SectionTitle";
 import {Button} from "../../../components/Button";
 import {Container} from "../../../components/Container";
-import {theme} from "../../../styles/Theme";
+import {S} from './Contact_Styled';
 
-export const Contact = () => {
+export const Contact: React.FC = () => {
     return (
-        <StyledContact>
+        <S.Contact>
             <Container>
                 <SectionTitle>For any questions please mail me:</SectionTitle>
-                <StyledForm>
-                    <Field placeholder={'Your name'} type={'text'}/>
-                    <Field  placeholder={'Your email'} type={'email'}/>
-                    <Field as={'textarea'} placeholder={'Your text'}/>
+                <S.Form>
+                    <S.Field placeholder={'Your name'} type={'text'}/>
+                    <S.Field placeholder={'Your email'} type={'email'}/>
+                    <S.Field as={'textarea'} placeholder={'Your text'}/>
                     <Button type={'submit'}>Send message</Button>
-                </StyledForm>
+                </S.Form>
             </Container>
-        </StyledContact>
+        </S.Contact>
     );
 };
-
-const StyledContact = styled.section`  
-    justify-content: center; 
-    padding: 100px 0;
-`;
-
-const StyledForm = styled.form`
-    max-width: 500px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;    
-    margin: 0 auto;  
-    
-    textarea {
-        resize: none;
-        height: 155px;
-    }
-`;
-
-const Field = styled.input`
-    width: 100%;
-    padding: 7px 15px;
-    color: ${theme.colors.colorFont};
-    border: 1px solid ${theme.colors.colorFont};
-    background-color: ${theme.colors.projectBg};
-    font-family: 'Poppins', sans-serif;
-    font-size: 18px;
-    font-weight: 300;
-    line-height: 26px;
-
-    &:focus-visible {
-        outline: 1px solid ${theme.colors.accentColor};
-    }
-
-
-`;
-

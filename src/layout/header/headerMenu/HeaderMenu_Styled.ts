@@ -1,35 +1,26 @@
-import React from 'react';
 import styled, {css} from "styled-components";
+import {font} from "../../../styles/common/Common";
 import {Button} from "../../../components/Button";
 import {theme} from "../../../styles/Theme";
 
+const ListItem = styled.li`
+    ${font({family: "'DM Sans', sans-serif", weight: 500, Fmax: 20, Fmin: 16})}
+    height: 26px;
+    line-height: 26px;
+    text-align: center;
 
-export const  MobileMenu = (props: {menuItems: Array<string>}) => {
-    return (
-        <StyledMenu>
-            <BurgerButton isOpen={false}>
-                <span></span>
-            </BurgerButton>
-            <MobileMenuOPopup isOpen={false}>
-                <ul>
-                    {props.menuItems.map((item, index) => {
-                        return (
-                            <ListItem key={index}>
-                                <Button as="a" href="#">{item}</Button>
-                                {/*<a href=''>{item}</a>*/}
-                            </ListItem>
-                        )
-                    })}
-                </ul>
-            </MobileMenuOPopup>
-        </StyledMenu>
-    );
-};
+    &:hover ${Button} {
+        color: ${theme.colors.colorActive};
+        cursor: pointer;
+    }
+`;
 
-const StyledMenu = styled.nav`
-    display: none;    
-    @media ${theme.media.tablet} {
-        display: block;
+const Menu = styled.nav`
+    ul {
+        display: flex;
+        gap: 50px;
+        justify-content: center;
+        list-style-type: none;
     }
 `;
 
@@ -108,22 +99,12 @@ const BurgerButton = styled.button<{isOpen: boolean}>`
                 width: 36px;
             `}
         }        
-    }
-    
+    }    
 `;
 
-const ListItem = styled.li`
-    //width: 56px;
-    height: 26px;     
-    font-family: 'DM Sans', sans-serif;
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 26px;
-    text-align: center;
-    //gap: 10px;
-    
-    &:hover ${Button} {
-        color: ${theme.colors.colorActive};
-        cursor: pointer;
-    }  
-`;
+export const S = {
+    ListItem,
+    Menu,
+    MobileMenuOPopup,
+    BurgerButton
+}
