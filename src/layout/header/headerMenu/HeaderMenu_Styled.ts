@@ -33,6 +33,7 @@ const MobileMenuOPopup= styled.div<{isOpen: boolean}>`
     bottom: 0; 
     z-index: 99999;
     display: none;
+    opacity: 0.95;
     
     ${props => props.isOpen && css<{isOpen: boolean}> `
         display: flex;

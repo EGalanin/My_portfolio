@@ -24,7 +24,7 @@ const arrayProjects = projectImages.map((item) => {
 
 export const Projects: React.FC = () => {
     return (
-        <S.Projects>
+        <S.Projects id={'projects'}>
             <Container>
                 <SectionTitle>Projects</SectionTitle>
                 <S.SubText>Things I’ve built so far</S.SubText>

@@ -39,10 +39,13 @@ const Name = styled.h2`
 `;
 
 const MainTitle = styled.h1`
-    ${font({weight: 700, color: `${theme.colors.colorMain}`, Fmax: 58, Fmin: 25})}
+    ${font({weight: 700, color: `${theme.colors.colorMain}`, Fmax: 48, Fmin: 20})}
     line-height: 70px;
     letter-spacing: -1px;
     text-align: left;
+    p {
+        display: none;
+    }
 `;
 
 const PhotoWrapper = styled.div`

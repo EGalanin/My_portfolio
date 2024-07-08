@@ -6,7 +6,7 @@ import {S} from './About_Styled';
 
 export const About: React.FC = () => {
     return (
-        <S.About>
+        <S.About id={'about'}>
             <Container>
                 <SectionTitle>About Me</SectionTitle>
                 <S.Text>The Generator App is an online tool that helps you to export ready-made templates ready to work as

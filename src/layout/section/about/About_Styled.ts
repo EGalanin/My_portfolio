@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import {font} from "../../../styles/common/Common";
+import {theme} from "../../../styles/Theme";
 
 const About = styled.section``;
 
@@ -10,7 +11,7 @@ const Text = styled.p`
 `;
 
 const Title = styled.h3`   
-    ${font({weight: 700, Fmax: 42, Fmin: 20})}    
+    ${font({weight: 700, color: `${theme.colors.titleFont}` , Fmax: 42, Fmin: 20})}    
     line-height: 52px;
     letter-spacing: 1.5px;
     text-align: left;

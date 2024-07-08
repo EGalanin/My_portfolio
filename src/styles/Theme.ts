@@ -33,14 +33,36 @@ export const theme = {
         }
     },
 
-    navigateItems: ['Home', 'About', 'Tech Stack', 'Projects', 'Contact'],
+    navigateItems: [
+        { title: 'Home',
+          href: 'home'
+        },
+        { title: 'About',
+            href: 'about'
+        },
+        { title: 'Tech Stack',
+            href: 'techStack'
+        },
+        { title: 'Projects',
+            href: 'projects'
+        },
+        { title: 'Contact',
+            href: 'contact'
+        }
+    ],
+
     SocialLinkItems: [
         {name: 'github', viewbox: "0 0 30 30"},
         {name: 'twit', viewbox: "0 0 30 30"},
         {name: 'linkedin', viewbox: "0 0 30 30"},
         {name: 'telegram', viewbox: "0 0 512 512"},
-        {name: 'vk', viewbox: "0 0 98 98"}],
-    footerItems: ['+91 12345 09876', 'info@example.com'],
+        {name: 'vk', viewbox: "0 0 98 98"}
+    ],
+
+    footerItems: [
+        { title: '+91 12345 09876'},
+        { title: 'info@example.com'}
+    ],
     // skillItems: ['typeHTML', 'typeCSS', 'typeJS', 'typeReact', 'typeBootstrap', 'typeTailwind', 'typeVSCode', 'typeSAAS', 'typeGit', 'typeGitHub', 'vector', 'greensock'],
 
     media: {

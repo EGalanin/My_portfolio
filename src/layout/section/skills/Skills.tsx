@@ -14,7 +14,7 @@ const SkillArray = skillItems.map((item) => {
 
 export const Skills: React.FC = () => {
     return (
-        <S.Skills>
+        <S.Skills id={'techStack'}>
             <Container>
                 <SectionTitle>My Tech Stack</SectionTitle>
                 <S.Text> Technologies I’ve been working with recently</S.Text>
