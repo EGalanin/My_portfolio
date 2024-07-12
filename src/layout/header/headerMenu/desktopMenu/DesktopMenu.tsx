@@ -1,7 +1,6 @@
 import React from 'react';
-import {Menu, MenuPropsType} from "../menu/Menu";
 import {S} from '../HeaderMenu_Styled';
-
+import {Menu, MenuPropsType} from "../../../../components/menu/Menu";
 
 export const DesktopMenu: React.FC<{ menuItems: MenuPropsType[] }> = (props: { menuItems: MenuPropsType[] }) => {
     return (

@@ -4,11 +4,11 @@ import {Skill} from "./skill/Skill";
 import {Container} from "../../../components/Container";
 import {S} from './Skills_Styled';
 
-const skillItems = ['typeHTML', 'typeCSS', 'typeJS', 'typeReact', 'vector', 'typeBootstrap', 'typeTailwind', 'typeSAAS', 'typeGit', 'greensock', 'typeVSCode', 'typeGitHub'];
+const skillItems = ['typeHTML', 'typeCSS', 'typeJS', 'typeReact', 'vector', 'typeBootstrap', 'typeTailwind', 'typeSAAS', 'typeGit', 'greensock', 'typeVSCode', 'typeGitHub', 'typeJS', 'typeJS'];
 
-const SkillArray = skillItems.map((item) => {
+const SkillArray = skillItems.map((item, index) => {
     return (
-        <Skill iconId={item}/>
+        <Skill key={index} iconId={item}/>
     )
 })
 

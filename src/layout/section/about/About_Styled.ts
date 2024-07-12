@@ -2,7 +2,9 @@ import styled from "styled-components";
 import {font} from "../../../styles/common/Common";
 import {theme} from "../../../styles/Theme";
 
-const About = styled.section``;
+const About = styled.section`
+    padding: 0 0 100px; 
+`;
 
 const Text = styled.p`  
     ${font({weight: 400, Fmax: 18, Fmin: 14})} 

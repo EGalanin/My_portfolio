@@ -1,19 +1,5 @@
 import styled, {css} from "styled-components";
-import {font} from "../../../styles/common/Common";
-import {Button} from "../../../components/Button";
 import {theme} from "../../../styles/Theme";
-
-const ListItem = styled.li`
-    ${font({family: "'DM Sans', sans-serif", weight: 500, Fmax: 20, Fmin: 16})}
-    height: 26px;
-    line-height: 26px;
-    text-align: center;
-
-    &:hover ${Button} {
-        color: ${theme.colors.colorActive};
-        cursor: pointer;
-    }
-`;
 
 const Menu = styled.nav`
     ul {
@@ -32,13 +18,15 @@ const MobileMenuOPopup= styled.div<{isOpen: boolean}>`
     right: 0;
     bottom: 0; 
     z-index: 99999;
-    display: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     opacity: 0.95;
+    transform: translateY(-100%);
+    transition: ${theme.animations.transition};
     
     ${props => props.isOpen && css<{isOpen: boolean}> `
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        transform: translateY(0);
     `} 
     
     ul {
@@ -104,8 +92,8 @@ const BurgerButton = styled.button<{isOpen: boolean}>`
 `;
 
 export const S = {
-    ListItem,
     Menu,
     MobileMenuOPopup,
-    BurgerButton
+    BurgerButton,
+    // NavLink
 }

@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import {Button} from "../Button";
 import {theme} from "../../styles/Theme";
 import {font} from "../../styles/common/Common";
+import {Link} from "react-scroll";
 
 const Menu = styled.nav`
     ul {
@@ -10,10 +10,6 @@ const Menu = styled.nav`
         justify-content: center;
         list-style-type: none;
     }
-
-    ${Button} {
-        color: ${theme.colors.titleFont};
-    } 
         
     @media ${theme.media.mobile} {
         ul {
@@ -27,15 +23,21 @@ const ListItem = styled.li`
     ${font({family: "'DM Sans', sans-serif", color: `${theme.colors.colorMain}`, weight: 400, Fmax: 18, Fmin: 14})}
     height: 26px;
     line-height: 26px;
-    text-align: left;
+    text-align: left;  
+    transition: ${theme.animations.transition};    
+`;
 
-    &:hover ${Button} {
+const NavLink = styled(Link)`
+    display: block;
+    &:hover, &:active{        
         color: ${theme.colors.colorActive};
         cursor: pointer;
+        transform: scale(1.2);
     }
 `;
 
 export const S ={
     Menu,
-    ListItem
+    ListItem,
+    NavLink
 }

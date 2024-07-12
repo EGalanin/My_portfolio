@@ -1,8 +1,19 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM, {createRoot} from 'react-dom/client';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {GlobalStyle} from "./styles/Global.styled";
+
+// const container = document.getElementById('root');
+// const root = createRoot(container);
+//
+// root.render(
+//     <React.StrictMode>
+//         <GlobalStyle />
+//         <App />
+//     </React.StrictMode>
+// );
+
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement

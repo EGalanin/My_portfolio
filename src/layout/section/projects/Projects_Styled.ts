@@ -2,7 +2,8 @@ import styled from "styled-components";
 import {font} from "../../../styles/common/Common";
 import {theme} from "../../../styles/Theme";
 
-const Projects = styled.section``;
+const Projects = styled.section`    
+`;
 
 const SubText = styled.h3`
     ${font({weight: 400, Fmax: 32, Fmin: 18})}
@@ -11,13 +12,27 @@ const SubText = styled.h3`
     margin-bottom: 113px;
 `;
 
+const ProjectsWrapper =styled.div`
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, auto));
+    justify-content: center;    
+    grid-auto-rows: minmax(567px, auto);
+    column-gap: 15px;
+    row-gap: 65px;
+`;
+
 const Project = styled.div`
     background: ${theme.colors.projectBg};
     box-shadow: 2px 2px 100px rgba(12, 10, 10, 0.2);
-    width: 373px;
+    width: 350px;
     height: 567px;
+    flex-grow: 1;
     border-radius: 20px;
-    margin-bottom: 65px;
+    column-gap: 10px;
+    row-gap: 65px;
+    //margin-bottom: 65px;
+    //margin-right: 10px;
+    
     @media ${theme.media.mobile} {
         margin: 10px auto;
     }
@@ -41,7 +56,8 @@ const Text = styled.p`
     ${font({weight: 300, Fmax: 18, Fmin: 14})}
     line-height: 26px;
     text-align: left;
-    max-width: 314px;
+    //max-width: 314px; 
+    width: 100%;
     overflow: hidden;
     display: -webkit-box;
     -webkit-box-orient: vertical;
@@ -80,6 +96,7 @@ const ContentWrapper = styled.div`
 export const S = {
     Projects,
     SubText,
+    ProjectsWrapper,
     Project,
     Image,
     Title,

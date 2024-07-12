@@ -26,6 +26,7 @@ const SocialItem = styled.li`
     justify-content: center;
     align-items: center;
     color: ${theme.colors.colorFont};
+    transition: ${theme.animations.transition};
 
     &:hover {
         color: ${theme.colors.colorActive};

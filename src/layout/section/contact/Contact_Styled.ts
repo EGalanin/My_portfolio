@@ -13,9 +13,10 @@ const Contact = styled.section`
         border-radius: 15px;
         background-color: ${theme.colors.projectBg};
         border: 1px solid ${theme.colors.colorFont};
+        transition: ${theme.animations.transition };
 
         &:hover {
-            transform: scale(1.3);
+            transform: scale(1.2);
             color: ${theme.colors.colorActive};
             border: 1px solid ${theme.colors.accentColor};
         }

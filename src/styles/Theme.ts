@@ -53,21 +53,28 @@ export const theme = {
 
     SocialLinkItems: [
         {name: 'github', viewbox: "0 0 30 30"},
-        {name: 'twit', viewbox: "0 0 30 30"},
-        {name: 'linkedin', viewbox: "0 0 30 30"},
+
         {name: 'telegram', viewbox: "0 0 512 512"},
         {name: 'vk', viewbox: "0 0 98 98"}
     ],
 
     footerItems: [
-        { title: '+91 12345 09876'},
-        { title: 'info@example.com'}
+        { title: '+91 12345 09876',
+            href: '#'
+        },
+        { title: 'info@example.com',
+            href: '#'
+        }
     ],
     // skillItems: ['typeHTML', 'typeCSS', 'typeJS', 'typeReact', 'typeBootstrap', 'typeTailwind', 'typeVSCode', 'typeSAAS', 'typeGit', 'typeGitHub', 'vector', 'greensock'],
 
     media: {
         tablet: 'screen and (max-width: 768px)',
         mobile: 'screen and (max-width: 576px)',
+    },
+
+    animations: {
+        transition: '.2s ease-in-out'
     }
 
 }; 

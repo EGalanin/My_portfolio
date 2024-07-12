@@ -15,22 +15,16 @@ const Input = styled.input`
     height: 0;
     width: 0;
     visibility: hidden;
-    
-    //& [type=checkbox] {
-    //    height: 0;
-    //    width: 0;
-    //    visibility: hidden;
-    //}
-    
+
     &:checked + label {
-        background: #bada55;
+        background: #bdcf7f;
     }
-    
+
     &:checked + label:after {
         left: calc(100% - 5px);
         transform: translateX(-100%);
     }
-    
+
 `;
 
 const Label = styled.label`

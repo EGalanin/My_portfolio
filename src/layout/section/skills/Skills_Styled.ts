@@ -3,38 +3,27 @@ import {theme} from "../../../styles/Theme";
 import {font} from "../../../styles/common/Common";
 
 const Skills = styled.section`
-    margin-bottom: 135px;
+    padding: 0 0 135px;
 `;
 
 const Skill = styled.div`
-    max-width: 200px;
-    width: 100%;
+    //max-width: 200px;
+    //width: 100%;
     padding: 15px;
-    flex-grow: 1;
     justify-self: center;
     align-self: center;
-
-    @media ${theme.media.mobile} {
-        max-width: 130px;
-    }
 `;
 
 const Wrapper = styled.div`
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+    justify-content: center;
+    grid-auto-rows: minmax(167px, auto);
     gap: 10px;
 
-    @media ${theme.media.tablet} {
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(4, 1fr);
-    }
-
     @media ${theme.media.mobile} {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(6, 1fr);
-        gap: 5px;
-    }
+        grid-template-columns: repeat(auto-fit, minmax(130px, auto));
+    }    
 `;
 
 const Text = styled.h3`
