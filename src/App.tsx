@@ -8,19 +8,23 @@ import {Footer} from "./layout/footer/Footer";
 import {Contact} from "./layout/section/contact/Contact";
 import {GoTopBtn} from "./components/goTopBtn/GoTopBtn";
 
+import {ThemeProvider} from "./components/providers/ThemeProvider";
 
 function App() {
     return (
-        <div className="App">
-            <Header/>
-            <Main/>
-            <About/>
-            <Skills/>
-            <Projects/>
-            <Contact/>
-            <Footer/>
-            <GoTopBtn />
-        </div>
+        <ThemeProvider>
+            <div className="App">
+                <Header/>
+                <Main/>
+                <About/>
+                <Skills/>
+                <Projects/>
+                <Contact/>
+                <Footer/>
+                <GoTopBtn/>
+            </div>
+        </ThemeProvider>
+
     );
 }
 

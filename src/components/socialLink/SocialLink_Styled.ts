@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import {theme} from "../../styles/Theme";
 
-const SocialLink = styled.nav`
+export const SocialLink = styled.nav`
     ul {
         display: flex;
         gap: 20px;
@@ -9,13 +9,9 @@ const SocialLink = styled.nav`
         list-style-type: none;
     }
 
-    @media ${theme.media.tablet} {
-        display: none;
-        //ul {
-        //    gap: 10px;
-        //    margin-top: 10px;
-        //}
-    }
+    // @media ${theme.media.tablet} {
+    //     display: none;        
+    // }
 `;
 
 const SocialItem = styled.li`       

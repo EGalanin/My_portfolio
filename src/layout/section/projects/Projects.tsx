@@ -10,7 +10,7 @@ import photo22 from '../../../assets/img/Rectangle-22.webp';
 import {Container} from "../../../components/Container";
 import {S} from './Projects_Styled';
 
-const projectImages = [photo18, photo16, photo8, photo24, photo23, photo22, photo22]
+const projectImages = [photo18, photo16, photo8, photo24, photo23, photo22]
 
 const arrayProjects = projectImages.map((item, index) => {
     return (

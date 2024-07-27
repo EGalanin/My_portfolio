@@ -1,7 +1,8 @@
 import React from 'react';
-import {Icon} from "../icon/Icon";
-import styled from "styled-components";
-import {animateScroll as scrol} from "react-scroll";
+import {Icon} from '../icon/Icon';
+import styled from 'styled-components';
+import {animateScroll as scrol} from 'react-scroll';
+import {theme} from '../../styles/Theme';
 
 export const Logo: React.FC = () => {
     return (
@@ -15,9 +16,9 @@ export const Logo: React.FC = () => {
 
 export const StyledIcon = styled.a`
 
-    background-image: linear-gradient(90deg, #13B0F5 50%, #E70FAA 86%);
-    color: transparent;
-    -webkit-background-clip: text;
+  background-image: linear-gradient(90deg, #13B0F5 50%, #E70FAA 86%);
+  color: transparent;
+  -webkit-background-clip: text;
 `;
 
 

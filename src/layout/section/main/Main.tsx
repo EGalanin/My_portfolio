@@ -1,6 +1,6 @@
 import React from 'react';
 import photo from './../../../assets/img/photo.webp'
-import {Container} from "../../../components/Container";
+import {Container} from '../../../components/Container';
 import {S} from './Main_Styled';
 import Typewriter from 'typewriter-effect';
 import Tilt from 'react-parallax-tilt';
@@ -16,10 +16,10 @@ export const Main: React.FC = () => {
                         <S.Item>My name is</S.Item>
                         <S.Name>Galanin Evgeniy</S.Name>
                         <S.MainTitle>
-                            <p>A Web Developer. A Frontend Developer.</p>
+                            <p>A Frontend Developer.</p>
                             <Typewriter
                                 options={{
-                                    strings: ['A Web Developer.', 'A Frontend Developer.'],
+                                    strings: ['A Frontend Developer.'],
                                     autoStart: true,
                                     loop: true,
                                 }}

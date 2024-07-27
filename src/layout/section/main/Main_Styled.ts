@@ -6,7 +6,10 @@ import backImg from "../../../assets/img/Abstract.png";
 const Main = styled.section`
     padding: 200px 0 140px;
     display: flex;
-        //color: ${theme.colors.colorMain}     
+
+    @media ${theme.media.tablet} {
+      padding: 120px 0 30px;
+    }              
 `;
 
 const MainWrapper = styled.div`
@@ -19,18 +22,20 @@ const MainWrapper = styled.div`
     }
 `;
 
-const TextWrapper = styled.div``;
+const TextWrapper = styled.div`
+    width: 70vw;
+`;
 
 const Item = styled.div`
     ${font({weight: 700, color: `${theme.colors.colorMain}`, Fmax: 58, Fmin: 25})}
-    line-height: 70px;
+    line-height: 40px;
     letter-spacing: -1px;
     text-align: left;
 `;
 
 const Name = styled.h2`
     ${font({weight: 700, Fmax: 58, Fmin: 25})}
-    line-height: 70px;
+    line-height: 40px;
     letter-spacing: -1px;
     text-align: left;
     background-image: linear-gradient(90deg, #13B0F5 50%, #E70FAA 86%);
@@ -40,7 +45,7 @@ const Name = styled.h2`
 
 const MainTitle = styled.h1`
     ${font({weight: 700, color: `${theme.colors.colorMain}`, Fmax: 48, Fmin: 20})}
-    line-height: 70px;
+    line-height: 40px;
     letter-spacing: -1px;
     text-align: left;
     p {

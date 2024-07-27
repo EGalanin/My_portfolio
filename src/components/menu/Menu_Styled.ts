@@ -3,7 +3,7 @@ import {theme} from "../../styles/Theme";
 import {font} from "../../styles/common/Common";
 import {Link} from "react-scroll";
 
-const Menu = styled.nav`
+export const Menu = styled.nav`
     ul {
         display: flex;
         gap: 20px;
